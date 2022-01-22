@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar Assignment</title>
+    <style>
+        div {
+            width: 50%;
+            padding: 10px;
+            border: 5px solid gray;
+            margin-top:auto;
+            margin: auto;
+        }
+        .center {
+            text-align: center;
+          }
+        </style>
+    <script>
+        function validateForm() {
+          var x = document.forms["form1"]["hol"].value;
+          if (x == "" || x == null) {
+            alert("Name must be filled out");
+            return false;
+          }
+        }
+        </script>
+</head>
+
+<body>
+    <div class = "center">
+            <H2> Please select Month and input Holidays in specified format</H2>
+    </div>
+    <div>
+    <form name="form1" action="res" onsubmit="return validateForm()">
+            <label for="mon">Month:</label>
+            <select name ="mon" id = "mon" placeholder="Month">
+                <option name="" value="" style="display:none;">Month</option>
+                <option name="January" value="1">January</option>
+                <option name="February" value="2">February</option>
+                <option name="March" value="3">March</option>
+                <option name="April" value="4">April</option>
+                  <option name="May" value="5">May</option>
+                <option name="June" value="6">June</option>
+                <option name="July" value="7">July</option>
+                <option name="August" value="8">August</option>
+                  <option name="September" value="9">September</option>
+                <option name="October" value="10">October</option>
+                <option name="November" value="11">November</option>
+                <option name="December" value="12">December</option>
+              </select><br>
+            Holidays: <input type="string" name="hol"> <em> Input format : 1,2,10,13,30 </em><br>
+        <button type="submit">Submit</button>
+    </form>
+    </div>
+</body>
+
+</html>
